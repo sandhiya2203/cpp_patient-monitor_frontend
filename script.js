@@ -3,7 +3,7 @@ async function loadPatientData() {
     try {
 
         const response = await fetch(
-            "https://web-production-ca02a.up.railway.app/patient"
+            "https://cpppatient-monitorbackend-production.up.railway.app/patient"
         );
 
         if (!response.ok) {
