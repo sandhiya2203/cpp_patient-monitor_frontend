@@ -4,8 +4,9 @@ async function loadPatientData()
     try
     {
         const response = await fetch(
-            "/patient?time=" + new Date().getTime()
-        );
+"https://cpppatient-monitorbackend-production.up.railway.app/patient?time="
++ new Date().getTime()
+);
 
 
         const data = await response.json();
