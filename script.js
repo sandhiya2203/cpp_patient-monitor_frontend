@@ -5,8 +5,9 @@ async function loadPatientData()
     {
 
         const response = await fetch(
-            "/patient_data1.json?time=" + new Date().getTime()
-        );
+    "https://cpppatient-monitorbackend-production.up.railway.app/patient?time=" 
+    + new Date().getTime()
+);
 
 
         const data = await response.json();
