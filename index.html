@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SDC Medical Dashboard</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Medical Dashboard</h1>
+    <p class="subtitle">
+        IEEE 11073 SDC Based Patient Monitoring System
+    </p>
+</header>
+
+
+<div class="status-box">
+    <b>Status :</b>
+    <span id="status">Disconnected</span>
+</div>
+
+
+<div class="datetime">
+
+    <div>
+        <b>Date :</b>
+        <span id="date"></span>
+    </div>
+
+    <div>
+        <b>Time :</b>
+        <span id="time"></span>
+    </div>
+
+</div>
+
+
+
+<div class="dashboard">
+
+
+<div class="card">
+
+<h2>Heart Rate</h2>
+
+<div class="reading">
+
+<span id="heart">0</span>
+
+<small>bpm</small>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>Blood Pressure</h2>
+
+<div class="reading">
+
+<span id="bp">0</span>
+
+<small>mmHg</small>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>SpO₂</h2>
+
+<div class="reading">
+
+<span id="spo2">0</span>
+
+<small>%</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<footer>
+
+Live Patient Monitoring Dashboard
+
+</footer>
+
+
+</div>
+
+
+
+<script src="/script.js"></script>
+
+
+</body>
+
+</html>
