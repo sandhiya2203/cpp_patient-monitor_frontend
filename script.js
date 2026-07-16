@@ -12,24 +12,24 @@ async function loadPatientData() {
         }
 
         const data = await response.json();
-        const patient = data.data || data;
+     //   const patient = data.data || data;
 
         console.log("API DATA:", data);
       console.log("PATIENT INFO:", data);
-      document.getElementById("patientName").innerText =
-    patient.patientName || "--";
+     document.getElementById("patientName").innerText =
+    data.patientName || "--";
 
 document.getElementById("patientId").innerText =
-    patient.patientId || "--";
+    data.patientId || "--";
 
 document.getElementById("bedId").innerText =
-    patient.bedId || "--";
+    data.bedId || "--";
 
 document.getElementById("age").innerText =
-    patient.age || "--";
+    data.age || "--";
 
 document.getElementById("gender").innerText =
-    patient.gender || "--";
+    data.gender || "--";
 
         // Status
         document.getElementById("status").textContent = data.status;
