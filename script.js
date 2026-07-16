@@ -14,6 +14,20 @@ async function loadPatientData() {
         const data = await response.json();
 
         console.log("API DATA:", data);
+        document.getElementById("patientName").textContent =
+    data.patientName;
+
+document.getElementById("patientId").textContent =
+    data.patientId;
+
+document.getElementById("bedId").textContent =
+    data.bedId;
+
+document.getElementById("age").textContent =
+    data.age;
+
+document.getElementById("gender").textContent =
+    data.gender;
 
         // Status
         document.getElementById("status").textContent = data.status;
