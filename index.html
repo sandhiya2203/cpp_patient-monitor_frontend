@@ -7,44 +7,114 @@
 
     <title>SDC Medical Dashboard</title>
 
-  <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 
 <body>
 
 <div class="container">
 
+
 <header>
     <h1>Medical Dashboard</h1>
+
     <p class="subtitle">
         IEEE 11073 SDC Based Patient Monitoring System
     </p>
 </header>
 
 
-<div class="status-box">
-    <b>Status :</b>
-    <span id="status">Disconnected</span>
+
+<!-- Patient Information -->
+
+<div class="patient-box">
+
+    <h2>Patient Information</h2>
+
+    <div class="patient-details">
+
+        <div>
+            <b>Name :</b>
+            <span id="patientName">--</span>
+        </div>
+
+
+        <div>
+            <b>Patient ID :</b>
+            <span id="patientId">--</span>
+        </div>
+
+
+        <div>
+            <b>Bed ID :</b>
+            <span id="bedId">--</span>
+        </div>
+
+
+        <div>
+            <b>Age :</b>
+            <span id="age">--</span>
+        </div>
+
+
+        <div>
+            <b>Gender :</b>
+            <span id="gender">--</span>
+        </div>
+
+
+    </div>
+
 </div>
 
 
+
+
+<!-- Connection Status -->
+
+<div class="status-box">
+
+    <b>Status :</b>
+
+    <span id="status">
+        Disconnected
+    </span>
+
+</div>
+
+
+
+
+<!-- Date Time -->
+
 <div class="datetime">
+
 
     <div>
         <b>Date :</b>
         <span id="date"></span>
     </div>
 
+
+
     <div>
         <b>Time :</b>
         <span id="time"></span>
     </div>
 
+
 </div>
 
 
 
+
+
+<!-- Medical Parameters -->
+
+
 <div class="dashboard">
+
 
 
 <div class="card">
@@ -60,6 +130,7 @@
 </div>
 
 </div>
+
 
 
 
@@ -81,6 +152,7 @@
 
 
 
+
 <div class="card">
 
 <h2>SpO₂</h2>
@@ -96,7 +168,10 @@
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -107,7 +182,9 @@ Live Patient Monitoring Dashboard
 </footer>
 
 
+
 </div>
+
 
 
 <script src="/script.js"></script>
