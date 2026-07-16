@@ -16,20 +16,20 @@ async function loadPatientData() {
 
         console.log("API DATA:", data);
       console.log("PATIENT INFO:", data);
-        document.getElementById("patientName").innerText =
-    data.patientName || "--";
+      document.getElementById("patientName").innerText =
+    patient.patientName || "--";
 
 document.getElementById("patientId").innerText =
-    data.patientId || "--";
+    patient.patientId || "--";
 
 document.getElementById("bedId").innerText =
-    data.bedId || "--";
+    patient.bedId || "--";
 
 document.getElementById("age").innerText =
-    data.age || "--";
+    patient.age || "--";
 
 document.getElementById("gender").innerText =
-    data.gender || "--";
+    patient.gender || "--";
 
         // Status
         document.getElementById("status").textContent = data.status;
