@@ -14,20 +14,21 @@ async function loadPatientData() {
         const data = await response.json();
 
         console.log("API DATA:", data);
-        document.getElementById("patientName").textContent =
-    data.patientName;
+      console.log("PATIENT INFO:", data);
+        document.getElementById("patientName").innerText =
+    data.patientName || "--";
 
-document.getElementById("patientId").textContent =
-    data.patientId;
+document.getElementById("patientId").innerText =
+    data.patientId || "--";
 
-document.getElementById("bedId").textContent =
-    data.bedId;
+document.getElementById("bedId").innerText =
+    data.bedId || "--";
 
-document.getElementById("age").textContent =
-    data.age;
+document.getElementById("age").innerText =
+    data.age || "--";
 
-document.getElementById("gender").textContent =
-    data.gender;
+document.getElementById("gender").innerText =
+    data.gender || "--";
 
         // Status
         document.getElementById("status").textContent = data.status;
