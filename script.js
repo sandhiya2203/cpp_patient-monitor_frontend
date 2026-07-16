@@ -12,6 +12,7 @@ async function loadPatientData() {
         }
 
         const data = await response.json();
+        const patient = data.data || data;
 
         console.log("API DATA:", data);
       console.log("PATIENT INFO:", data);
