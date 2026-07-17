@@ -18,23 +18,43 @@ async function loadPatientData() {
         // Status
         document.getElementById("status").textContent = data.status;
 
-        // Heart Rate
-        document.getElementById("heart").textContent = data.heartRate;
+        if (data.status === "Connected") {
 
-        // Blood Pressure
-        document.getElementById("bp").textContent = data.bloodPressure;
+            // Heart Rate
+            document.getElementById("heart").textContent = data.heartRate;
 
-        // SpO₂
-        document.getElementById("spo2").textContent = data.spo2;
+            // Blood Pressure
+            document.getElementById("bp").textContent = data.bloodPressure;
 
-        // Last received Date & Time from backend
-        document.getElementById("date").textContent = data.date;
-        document.getElementById("time").textContent = data.time;
+            // SpO₂
+            document.getElementById("spo2").textContent = data.spo2;
+
+            // Date & Time
+            document.getElementById("date").textContent = data.date;
+            document.getElementById("time").textContent = data.time;
+
+        } else {
+
+            // Clear values when disconnected
+            document.getElementById("heart").textContent = "";
+            document.getElementById("bp").textContent = "";
+            document.getElementById("spo2").textContent = "";
+            document.getElementById("date").textContent = "";
+            document.getElementById("time").textContent = "";
+        }
 
     } catch (error) {
+
         console.log("ERROR:", error);
 
         document.getElementById("status").textContent = "Backend Offline";
+
+        // Clear values when backend is offline
+        document.getElementById("heart").textContent = "";
+        document.getElementById("bp").textContent = "";
+        document.getElementById("spo2").textContent = "";
+        document.getElementById("date").textContent = "";
+        document.getElementById("time").textContent = "";
     }
 }
 
